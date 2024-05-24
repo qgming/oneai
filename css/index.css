@@ -1,8 +1,8 @@
 * {
-     margin: 0;
-     padding: 0;
-     list-style-type: none;
- }
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
 
 body {
     width: 100%;
@@ -11,7 +11,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: rgba(180, 180, 180, 0.8);
+    background-color: #f9f9f9;
     background-image: url("https://api.ee123.net/img/");
     background-size: 100%;
     /* backdrop-filter: blur(50px);*/
@@ -57,7 +57,6 @@ body {
 .search {
     position: relative;
 }
-
 
 .searchBox {
     display: flex;
@@ -178,12 +177,14 @@ body {
     right: 20px;
     top: 20px;
 }
+
 .setting img {
     position: absolute;
     right: 0px;
     width: 30px;
     height: 30px;
 }
+
 .settingBox {
     display: none;
     margin-top: 30px;
@@ -195,7 +196,39 @@ body {
     background: rgba(210, 210, 210, 0.3);
     backdrop-filter: blur(30px);
 }
+
 .optionAll {
     padding: 10px;
 }
 
+/* 响应式设计 */
+@media screen and (max-width: 768px) {
+    #day {
+        font-size: 30px;
+        font-weight: 466;
+    }
+    .timeLittle {
+        width: 30px;
+    }
+    .little {
+        width: 50px;
+    }
+    #oneDay {
+        font-size: 15px;
+        font-weight: 366;
+    }
+    .searchBox {
+        width: 300px;
+        height: 30px;
+    }
+
+
+    body {
+        background-image: url("https://bing.ee123.net/img/?w=768x1280");
+    }
+
+    .developer {
+        font-size: 10px;
+    }
+
+}
