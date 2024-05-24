@@ -203,6 +203,10 @@ body {
 
 /* 响应式设计 */
 @media screen and (max-width: 768px) {
+    body {
+        background-image: url("https://bing.ee123.net/img/?w=768x1280");
+    }
+    
     #day {
         font-size: 30px;
         font-weight: 466;
@@ -222,9 +226,7 @@ body {
         height: 30px;
     }
 
-    body {
-        background-image: url("https://bing.ee123.net/img/?w=768x1280");
-    }
+    
 
     .developer {
         font-size: 10px;
