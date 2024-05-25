@@ -48,11 +48,17 @@ body {
 .footer {
   position: absolute;
   bottom: 20px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: gray;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .developer {
-  color: #fafafa80;
-  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
 }
 #hitokoto_text{
   color: #ffffff;
