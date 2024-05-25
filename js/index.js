@@ -1,8 +1,10 @@
 let stext = document.getElementById('searchText')
 let simg = document.getElementById('searchImg')
-let url = "https://quark.sm.cn/s?q="
+let url = "https://www.bing.com/search?q="
 // https://quark.sm.cn/s?q=
 // https://www.baidu.com/s?wd=
+// https://www.bing.com/search?q=
+
 simg.onclick = search
 
 // 搜索
