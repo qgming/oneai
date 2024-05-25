@@ -1,7 +1,8 @@
 let stext = document.getElementById('searchText')
 let simg = document.getElementById('searchImg')
-let url = "https://www.baidu.com/s?wd="
-
+let url = "https://quark.sm.cn/s?q="
+// https://quark.sm.cn/s?q=
+// https://www.baidu.com/s?wd=
 simg.onclick = search
 
 // 搜索
