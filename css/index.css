@@ -60,11 +60,11 @@ body {
   align-items: center;
   font-size: 16px;
 }
-#hitokoto_text{
+/* #hitokoto_text{
   color: #ffffff;
   font-size: 16px;
   margin-bottom: 30px;
-}
+} */
 
 
 
@@ -86,10 +86,10 @@ body {
   .developer {
     font-size: 9px;
   }
-  #hitokoto_text{
+  /* #hitokoto_text{
     font-size: 14px;
     margin-bottom: 20px;
-  }
+  } */
   
 
 }
