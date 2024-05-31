@@ -51,14 +51,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: gray;
+  color: #f9f9f9;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .developer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 14px;
+  font-size: 16px;
 }
 #hitokoto_text{
   color: #ffffff;
@@ -84,7 +84,7 @@ body {
     height: 20px;
   }
   .developer {
-    font-size: 8px;
+    font-size: 9px;
   }
   #hitokoto_text{
     font-size: 14px;
