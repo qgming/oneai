@@ -58,7 +58,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 16px;
+  font-size: 12px;
+  font-weight: 400;
+}
+.apiTxt {
+  font-size: 15px;
+  font-weight: 600;
 }
 /* #hitokoto_text{
   color: #ffffff;
@@ -84,7 +89,7 @@ body {
     height: 20px;
   }
   .developer {
-    font-size: 9px;
+    font-size: 10px;
   }
   /* #hitokoto_text{
     font-size: 14px;
