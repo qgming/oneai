@@ -39,7 +39,7 @@ function searchAi() {
     alert('请输入搜索内容');
   } else {
     console.log('发送的消息：', searchText.value);
-    var searchAiWeb = window.open('https://home.videolist.cn//pages/aisearch.html', '_blank');
+    var searchAiWeb = window.open('https://home.videolist.cn/pages/aisearch.html', '_blank');
     // 监听页面B是否加载完成
     searchAiWeb.addEventListener('load', function () {
       // 发送消息
