@@ -13,7 +13,21 @@
   <div class="search">
     <div class="searchBox">
       <input id="searchText" type="text">
-      <img id="searchImg" src="img/search.svg" alt="">
+      <img id="searchImg" src="img/search.svg" alt="必应搜索">
+      <img id="aiImg" src="img/searchai.svg" alt="大模型搜索">
+    </div>
+  </div>
+  <div class="setting">
+    <img id="settingImg" src="img/setting.svg" alt="设置">
+    <div class="settingBox" id="settingBox">
+      <li>
+        <ol><div>每日壁纸</div></ol>
+        <ol><div>搜索引擎</div><input id="searchUrl" type="text"></ol>
+        <ol><div>APIKEY</div><input id="apiKey" type="text"></ol>
+        <ol><div>API网站</div><input id="apiWebsite" type="text"></ol>
+        <ol><div>每日一言</div></ol>
+        <ol><button id="saveButton">保存</button></ol>
+      </li>
     </div>
   </div>
 
@@ -22,14 +36,15 @@
       <p id="hitokoto_text">&nbsp;</p>
     </div> -->
     <div class="developer">
-      <p class="apiTxt">基础搜索/每日壁纸服务由Bing®️提供</p>
-      <p>Copyright ©️2024 极点维度 All Rights Reserved</p>
-      <p>version 0.0.2</p>
+      <p class="apiTxt">搜索服务由Bing®️提供</p>
+      <p>Copyright ©️2024 Extreme Dimension All Rights Reserved</p>
+      <p>version 0.0.3</p>
     </div>
   </div>
 
 </body>
+<!-- <script src="js/gpt.js"></script> -->
 <script src="/js/index.js"></script>
-<script src="/js/api.js"></script>
+<!-- <script src="/js/api.js"></script> -->
 
 </html>
