@@ -39,11 +39,11 @@ function searchAi() {
     alert('请输入搜索内容');
   } else {
     console.log('发送的消息：', searchText.value);
-    var searchAiWeb = window.open('http://127.0.0.1:5500/pages/aisearch.html', '_blank');
+    var searchAiWeb = window.open('https://home.videolist.cn//pages/aisearch.html', '_blank');
     // 监听页面B是否加载完成
     searchAiWeb.addEventListener('load', function () {
       // 发送消息
-      searchAiWeb.postMessage(searchText.value, 'http://127.0.0.1:5500');
+      searchAiWeb.postMessage(searchText.value, 'https://home.videolist.cn/');
     });
   }
 }

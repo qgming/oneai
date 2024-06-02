@@ -47,7 +47,7 @@ window.onload = function () {
 
 // 在页面B接收页面A的消息
 window.addEventListener('message', function (event) {
-  if (event.origin !== 'http://127.0.0.1:5500') return; // 检查来源
+  if (event.origin !== 'https://home.videolist.cn/') return; // 检查来源
   let searchText = event.data
   // console.log('接收的消息：' + searchText); 
   sendMessage(searchText)
