@@ -43,7 +43,7 @@ function searchAi() {
     // 监听页面B是否加载完成
     searchAiWeb.addEventListener('load', function () {
       // 发送消息
-      searchAiWeb.postMessage(searchText.value, 'https://home.videolist.cn/');
+      searchAiWeb.postMessage(searchText.value, 'https://home.videolist.cn');
     });
   }
 }
