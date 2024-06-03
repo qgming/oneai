@@ -12,20 +12,36 @@
 <body>
   <div class="search">
     <div class="searchBox">
-      <input id="searchText" type="text">
-      <img id="searchImg" src="img/search.svg" alt="必应搜索">
-      <img id="aiImg" src="img/searchai.svg" alt="大模型搜索">
+      <input id="searchText" type="text" placeholder="输入你想搜索的问题">
+      <div class="searchOption">
+        <div class="aSearch"  id="searchImg">
+          <img src="img/search.svg" alt="必应搜索"><span>搜索</span>
+        </div>
+        <div class="aSearch"  id="aiImg" >
+          <img src="img/searchai.svg" alt="大模型搜索"><span>AI搜索</span>
+        </div>
+      </div>
     </div>
   </div>
   <div class="setting">
     <img id="settingImg" src="img/setting.svg" alt="设置">
     <div class="settingBox" id="settingBox">
       <li>
-        <ol><div>每日壁纸</div></ol>
-        <ol><div>搜索引擎</div><input id="searchUrl" type="text"></ol>
-        <ol><div>APIKEY</div><input id="apiKey" type="text"></ol>
-        <ol><div>API网站</div><input id="apiWebsite" type="text"></ol>
-        <ol><div>每日一言</div></ol>
+        <ol>
+          <div>每日壁纸</div>
+        </ol>
+        <ol>
+          <div>搜索引擎</div><input id="searchUrl" type="text">
+        </ol>
+        <ol>
+          <div>APIKEY</div><input id="apiKey" type="text">
+        </ol>
+        <ol>
+          <div>API网站</div><input id="apiWebsite" type="text">
+        </ol>
+        <ol>
+          <div>每日一言</div>
+        </ol>
         <ol><button id="saveButton">保存</button></ol>
       </li>
     </div>
