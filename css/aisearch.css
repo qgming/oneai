@@ -7,7 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: Arial, sans-serif;
+  /* font-family: Arial, sans-serif; */
   background-color: #f9f9f9;
 }
 
@@ -15,7 +15,7 @@ body {
   margin-top: 30px;
   width: 600px;
   border: 1px solid #ccc;
-  border-radius: 9px;
+  border-radius: 12px;
   padding: 20px;
   background-color: white;
 }
@@ -23,7 +23,6 @@ body {
 .chatBox {
   /* height: 100%; */
   overflow-y: scroll;
-  padding-bottom: 10px;
 }
 
 /* 问题输入框 */
@@ -96,5 +95,13 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  .chatContainer {
+    width: 500px;
+    padding: 10px;
+  }
 
+  /* .message {
+    width: 400px;
+  } */
+  
 }
