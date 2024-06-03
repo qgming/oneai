@@ -27,6 +27,11 @@ body {
   padding-bottom: 20px;
 }
 
+/* 伪元素隐藏滑动条 */
+.chatBox::-webkit-scrollbar {
+  display: none;
+}
+
 /* 问题输入框 */
 .inputBox {
   /* position: absolute;
