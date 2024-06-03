@@ -164,9 +164,9 @@ ol button:hover {
 
 /* 响应式设计 */
 @media screen and (max-width: 768px) {
-  body {
+  /* body {
     background-image: url("https://bing.ee123.net/img/?w=768x1280");
-  }
+  } */
 
   #searchText {
     width: 350px;
