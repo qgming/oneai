@@ -9,7 +9,7 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #f9f9f9;
-  background-image: url("https://bing.ee123.net/img/");
+  /* background-image: url("https://bing.ee123.net/img/"); */
 }
 
 /* 搜索框 */
@@ -21,7 +21,7 @@ body {
 .searchBox {
   display: flex;
   flex-direction: column;
-  border-radius: 16px;
+  border-radius: 12px;
   background-color: white;
   padding: 10px;
   border: 1px solid black;
@@ -81,7 +81,7 @@ body {
   flex-direction: column;
   left: 10px;
   top: 10px;
-  background-color: #f9f9f9;
+  background-color: white;
   border-radius: 12px;
   padding: 3px;
   border: 1px solid black;
@@ -102,7 +102,7 @@ body {
 ol {
   padding: 5px;
   /* border: 1px solid black; */
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
   margin: 3px;
   border-radius: 6px;
 }
@@ -117,14 +117,20 @@ ol input {
 }
 
 ol button {
-  height: 30px;
-  width: 306px;
-  margin: 1px;
-  border: 1px solid black;
-  background-color: #f9f9f9;
+  height: 38px;
+  width: 308px;
+  border: 1px solid #f1f2f3;
+  background-color: #f1f2f3;
   border-radius: 6px;
+  font-size: 15px;
 }
 
+ol button:hover {
+  border: 1px solid black;
+  background-color: #f9f9f9;
+}
+
+/* 版权信息 */
 .footer {
   position: absolute;
   bottom: 20px;
@@ -144,8 +150,8 @@ ol button {
 }
 
 .apiTxt {
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 500;
 }
 
 /* #hitokoto_text{
