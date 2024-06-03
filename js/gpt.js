@@ -1,5 +1,3 @@
-
-
 let API_KEY
 let ENDPOINT
 //获取元素
@@ -8,6 +6,10 @@ let sendButton = document.getElementById('sendButton')
 let chatBox = document.getElementById('chatBox')
 
 
+// 获取屏幕的高度
+let screenHeight = window.innerHeight;
+// 将屏幕的高度设置为div的高度
+chatBox.style.height = screenHeight - 200 + 'px';
 
 // 进入网站执行
 //初始化prompt

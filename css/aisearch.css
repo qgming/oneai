@@ -5,45 +5,90 @@
 
 body {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   font-family: Arial, sans-serif;
   background-color: #f9f9f9;
 }
 
 .chatContainer {
-  margin-top: 100px;
+  margin-top: 30px;
   width: 600px;
-  max-width: 600px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 9px;
   padding: 20px;
   background-color: white;
 }
 
 .chatBox {
-  height: 500px;
+  /* height: 100%; */
   overflow-y: scroll;
-  border-bottom: 1px solid #ccc;
   padding-bottom: 10px;
 }
 
+/* 问题输入框 */
+.inputBox {
+  position: absolute;
+  bottom: 30px;
+  width: 600px;
+  height: 42px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 12px;
+  background-color: white;
+  padding: 10px;
+}
+
+#sxWeb {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid #f5f6f7;
+  background-color: #f1f2f3;
+  border-radius: 9px;
+}
+
+#sxWeb:hover {
+  border: 1px solid black;
+  background-color: #f9f9f9;
+}
+
 #textInput {
-  width: calc(100% - 100px);
-  padding: 8px;
-  margin-top: 10px;
-  border-radius: 5px;
+  width: 500px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 9px;
   border: 1px solid #ccc;
+  margin: 0px 10px 0px 10px;
 }
 
 #sendButton {
-  padding: 8px 15px;
-  margin-left: 10px;
-  border-radius: 5px;
+  width: 80px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 9px;
+  border: 1px solid #f5f6f7;
+  background-color: #f1f2f3;
+  font-size: 16px;
+  font-weight: 500;
 }
 
+#sendButton:hover {
+  border: 1px solid black;
+  background-color: #f9f9f9;
+}
+
+/* 对话内容 */
+
 .message {
+  width: 500px;
   margin-bottom: 10px;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 9px;
+  padding: 10px;
 }
 
 .sender {
@@ -51,8 +96,5 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .chatContainer {
-    width: 700px;
-  }
 
 }
