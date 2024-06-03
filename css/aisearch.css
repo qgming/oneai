@@ -20,6 +20,7 @@ body {
   border-radius: 12px;
   padding: 20px;
   background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 .chatBox {
@@ -41,10 +42,11 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  border: 1px solid black;
+  border: 1px solid #f1f2f3;
   border-radius: 12px;
   background-color: white;
   padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 #sxWeb {
@@ -57,8 +59,8 @@ body {
 }
 
 #sxWeb:hover {
-  border: 1px solid black;
   background-color: #f9f9f9;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 #textInput {
@@ -66,9 +68,13 @@ body {
   height: 30px;
   padding: 5px;
   border-radius: 9px;
-  border: 1px solid #ccc;
+  border: 1px solid #f1f2f3;
   margin: 0px 10px 0px 10px;
   outline: none;
+}
+
+#textInput:hover {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 #sendButton {
@@ -83,19 +89,20 @@ body {
 }
 
 #sendButton:hover {
-  border: 1px solid black;
   background-color: #f9f9f9;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 /* 对话内容 */
 
 .message {
   width: 500px;
-  margin-bottom: 10px;
-  border: 1px solid black;
+  margin: 2px 0 10px 2px;
+  border: 1px solid #f1f2f3;
   background-color: white;
   border-radius: 9px;
   padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 .sender {
