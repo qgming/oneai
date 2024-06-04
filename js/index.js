@@ -8,6 +8,7 @@ let url = "https://www.bing.com/search?q="
 // https://quark.sm.cn/s?q=
 // https://www.baidu.com/s?wd=
 // https://www.bing.com/search?q=
+// https://www.google.com/search?q=
 
 //普通搜索
 searchImg.onclick = function search() {
@@ -66,43 +67,54 @@ function noDisplay(element) {
   }
 }
 
-// 设置页面
-// 检查浏览器是否支持localStorage
-if (typeof (Storage) !== "undefined") {
-  // 获取input元素
-  // let apiKey = document.getElementById("apiKey");
-  let apiKey = document.getElementById("apiKey");
-  let apiWebsite = document.getElementById("apiWebsite");
-  let searchUrl = document.getElementById('searchUrl')
 
-  // 获取保存按钮元素
-  let saveButton = document.getElementById("saveButton");
+// 确保 DOM 完全加载后再执行脚本
+document.addEventListener('DOMContentLoaded', function () {
+  // 设置页面
+  // 检查浏览器是否支持localStorage
+  if (typeof (Storage) !== "undefined") {
+    // 获取input元素
+    // let apiKey = document.getElementById("apiKey");
+    let apiKey = document.getElementById("apiKey");
+    let apiWebsite = document.getElementById("apiWebsite");
+    let apiModel = document.getElementById('apiModel')
+    let searchUrl = document.getElementById('searchUrl')
 
-  // 当保存按钮被点击时，保存input元素的值到localStorage
-  saveButton.addEventListener("click", function () {
-    localStorage.setItem("apiKey", apiKey.value);
-    localStorage.setItem("apiWebsite", apiWebsite.value);
-    localStorage.setItem("searchUrl",searchUrl.value)
-    // localStorage.setItem("apiKey", apiKey.value);
-    alert("保存成功!");
-  });
+    // 获取保存按钮元素
+    let saveButton = document.getElementById("saveButton");
 
-  // 在页面加载时，从localStorage获取值并赋给其他变量
-  window.onload = function () {
-    let savedKey = localStorage.getItem("apiKey");
-    let savedWebsite = localStorage.getItem("apiWebsite");
-    let savedUrl = localStorage.getItem("searchUrl");
-    if (savedKey) {
-      apiKey.value = savedKey;
-    }
-    if (savedWebsite) {
-      apiWebsite.value = savedWebsite;
-    }
-    if (savedUrl) {
-      searchUrl.value = savedUrl;
-      url = savedUrl;
-    }
-  };
-} else {
-  console.log("浏览器版本过低，不支持本地保存！");
-}
+    // 当保存按钮被点击时，保存input元素的值到localStorage
+    saveButton.addEventListener("click", function () {
+      localStorage.setItem("apiKey", apiKey.value);
+      localStorage.setItem("apiWebsite", apiWebsite.value);
+      localStorage.setItem("apiModel", apiModel.value);
+      localStorage.setItem("searchUrl", searchUrl.value);
+      // localStorage.setItem("apiKey", apiKey.value);
+      alert("保存成功!");
+    });
+
+    // 在页面加载时，从localStorage获取值并赋给其他变量
+    window.onload = function () {
+      let savedKey = localStorage.getItem("apiKey");
+      let savedWebsite = localStorage.getItem("apiWebsite");
+      let savedUrl = localStorage.getItem("searchUrl");
+      let savedModel = localStorage.getItem("apiModel")
+      if (savedKey) {
+        apiKey.value = savedKey;
+      }
+      if (savedWebsite) {
+        apiWebsite.value = savedWebsite;
+      }
+      if (savedModel) {
+        apiModel.value = savedModel;
+      }
+      if (savedUrl) {
+        searchUrl.value = savedUrl;
+        url = savedUrl;
+      }
+
+    };
+  } else {
+    console.log("浏览器版本过低，不支持本地保存！");
+  }
+});

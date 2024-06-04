@@ -1,10 +1,14 @@
+//定义API相关变量
 let API_KEY
 let ENDPOINT
+// 定义模型名称的变量
+// let MODEL_NAME = "gpt-3.5-turbo";
+let MODEL_NAME
+
 //获取元素
 let userInput = document.getElementById('textInput')
 let sendButton = document.getElementById('sendButton')
 let chatBox = document.getElementById('chatBox')
-
 
 // 获取屏幕的高度
 let screenHeight = window.innerHeight;
@@ -12,12 +16,12 @@ let screenHeight = window.innerHeight;
 chatBox.style.height = screenHeight -160 + 'px';
 
 // 进入网站执行
-//初始化prompt
 //添加api
 window.onload = function () {
   //从缓存中获取api
   let savedKey = localStorage.getItem("apiKey");
   let savedWebsite = localStorage.getItem("apiWebsite");
+  let savedModel = localStorage.getItem('apiModel')
   if (savedKey) {
     // 将localStorage中的值赋给一个变量，不要let，let为重新声明，这样会导致不是全局变量
     API_KEY = savedKey;
@@ -30,7 +34,15 @@ window.onload = function () {
   } else {
     console.log("存储中没有读取到合法的值！");
   }
-
+  if (savedModel) {
+    MODEL_NAME = savedModel;
+    // MODEL_NAME = '\"' + savedModel + '\"';
+  } else {
+    console.log("存储中没有读取到合法的值！");
+  }
+  console.log(MODEL_NAME);
+ 
+  // //初始化提示词
   fetch('../prompt/search.txt') 
     .then(response => response.text()) // 将响应转换为文本
     .then(data => {
@@ -100,8 +112,8 @@ function sendMessage(aMessage) {
   // 发送消息到GPT
   addMessage("user", message)
 
-
-  let body = JSON.stringify({ model: "gpt-3.5-turbo", messages: messages, stream: true })
+  let body = JSON.stringify({ model: MODEL_NAME, messages: messages, stream: true })
+  console.log(MODEL_NAME);
   ssePost(
     // 请求地址
     ENDPOINT,
@@ -120,9 +132,11 @@ function sendMessage(aMessage) {
   );
 }
 
+let delOther = /"(.*?)\"/
 
 // 匹配回复内容的正则表达式
-let contentPattern = /"content":"(.*?)"}/;
+let contentPattern = /"content":"(.*?)(?!"role":"assistant")"/;
+
 
 /**
  * 获取回复内容
