@@ -13,7 +13,7 @@ let chatBox = document.getElementById('chatBox')
 // 获取屏幕的高度
 let screenHeight = window.innerHeight;
 // 将屏幕的高度设置为div的高度
-chatBox.style.height = screenHeight -160 + 'px';
+chatBox.style.height = screenHeight - 160 + 'px';
 
 // 进入网站执行
 //添加api
@@ -41,9 +41,9 @@ window.onload = function () {
     console.log("存储中没有读取到合法的值！");
   }
   console.log(MODEL_NAME);
- 
+
   // //初始化提示词
-  fetch('../prompt/search.txt') 
+  fetch('../prompt/search.txt')
     .then(response => response.text()) // 将响应转换为文本
     .then(data => {
       // 将文件内容赋值给变量
@@ -204,6 +204,7 @@ function displayGPTMessageAndGetContainer() {
   senderSpan.textContent = '极点AI: '
 
   let textSpan = document.createElement('p')
+
   messageDiv.appendChild(senderSpan)
   messageDiv.appendChild(textSpan)
 
